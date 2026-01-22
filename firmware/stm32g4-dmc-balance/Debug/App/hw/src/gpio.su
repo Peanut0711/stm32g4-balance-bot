@@ -1,0 +1,6 @@
+../App/hw/src/gpio.c:50:6:gpioInit	16	static
+../App/hw/src/gpio.c:67:6:gpioPinMode	40	static
+../App/hw/src/gpio.c:117:6:gpioPinWrite	24	static
+../App/hw/src/gpio.c:134:6:gpioPinRead	24	static
+../App/hw/src/gpio.c:151:6:gpioPinToggle	16	static
+../App/hw/src/gpio.c:163:6:cliGpio	40	static
