@@ -1,0 +1,4 @@
+../App/ap/communication/bluetooth.c:20:6:btInit	1
+../App/ap/communication/bluetooth.c:25:6:btUpdate	11
+../App/ap/communication/bluetooth.c:96:6:btRxDataProcess	18
+../App/ap/communication/bluetooth.c:185:6:cliBluetooth	10

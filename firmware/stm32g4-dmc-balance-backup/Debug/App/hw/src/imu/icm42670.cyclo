@@ -1,0 +1,8 @@
+../App/hw/src/imu/icm42670.c:34:6:icm42670Init	5
+../App/hw/src/imu/icm42670.c:70:6:icm42670InitRegs	1
+../App/hw/src/imu/icm42670.c:126:6:icm42670GetInfo	2
+../App/hw/src/imu/icm42670.c:153:6:regReadByte	1
+../App/hw/src/imu/icm42670.c:161:6:regWriteByte	1
+../App/hw/src/imu/icm42670.c:169:6:regRead	2
+../App/hw/src/imu/icm42670.c:182:6:regWrite	2
+../App/hw/src/imu/icm42670.c:196:6:cliCmd	12

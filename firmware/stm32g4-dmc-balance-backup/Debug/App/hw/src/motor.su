@@ -1,0 +1,3 @@
+../App/hw/src/motor.c:58:6:motorInit	8	static
+../App/hw/src/motor.c:67:6:motorWrite	32	static
+../App/hw/src/motor.c:146:6:cliMotor	24	static

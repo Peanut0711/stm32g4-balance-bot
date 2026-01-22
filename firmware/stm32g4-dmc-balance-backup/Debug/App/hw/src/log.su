@@ -1,0 +1,8 @@
+../App/hw/src/log.c:52:6:logInit	8	static
+../App/hw/src/log.c:79:6:logEnable	4	static
+../App/hw/src/log.c:84:6:logDisable	4	static
+../App/hw/src/log.c:89:6:logBoot	16	static
+../App/hw/src/log.c:94:6:logOpen	16	static
+../App/hw/src/log.c:104:6:logBufPrintf	48	static
+../App/hw/src/log.c:138:6:logPrintf	16	static
+../App/hw/src/log.c:173:6:cliCmd	40	static

@@ -1,0 +1,6 @@
+../App/hw/hw.c:10:6:hwInit	16	static
+../App/hw/hw.c:44:6:map	24	static
+../App/hw/hw.c:49:6:delay	16	static
+../App/hw/hw.c:54:6:delayUs	24	static
+../App/hw/hw.c:60:10:millis	8	static
+../App/hw/hw.c:65:10:micros	32	static

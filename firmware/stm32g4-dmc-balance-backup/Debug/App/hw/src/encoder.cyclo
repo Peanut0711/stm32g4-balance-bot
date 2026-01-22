@@ -1,0 +1,9 @@
+../App/hw/src/encoder.c:38:6:encoderInit	2
+../App/hw/src/encoder.c:60:6:encoderInitGpio	1
+../App/hw/src/encoder.c:65:6:encoderReset	2
+../App/hw/src/encoder.c:74:6:encoderClearCount	2
+../App/hw/src/encoder.c:83:9:encoderGetCount	2
+../App/hw/src/encoder.c:95:6:encoderSetCount	2
+../App/hw/src/encoder.c:106:6:encoderISR	8
+../App/hw/src/encoder.c:158:6:HAL_GPIO_EXTI_Callback	5
+../App/hw/src/encoder.c:184:6:cliEncoder	8

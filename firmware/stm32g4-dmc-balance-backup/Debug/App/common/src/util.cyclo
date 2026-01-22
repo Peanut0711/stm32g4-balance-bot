@@ -1,0 +1,4 @@
+../App/common/src/util.c:4:10:utilConvert8ToU32	2
+../App/common/src/util.c:17:10:utilConvert8ToU16	2
+../App/common/src/util.c:69:6:utilUpdateCrc	1
+../App/common/src/util.c:80:10:utilCalcCRC	2

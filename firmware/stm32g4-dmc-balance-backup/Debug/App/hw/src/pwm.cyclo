@@ -1,0 +1,7 @@
+../App/hw/src/pwm.c:44:6:pwmInit	2
+../App/hw/src/pwm.c:63:6:pwmInitTimer	1
+../App/hw/src/pwm.c:73:6:pwmIsInit	1
+../App/hw/src/pwm.c:78:6:pwmWrite	3
+../App/hw/src/pwm.c:97:10:pwmRead	2
+../App/hw/src/pwm.c:104:10:pwmGetMax	2
+../App/hw/src/pwm.c:113:6:cliPwm	9
