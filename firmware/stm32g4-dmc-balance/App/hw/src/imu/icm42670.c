@@ -26,6 +26,61 @@ static uint8_t i2c_ch      = HW_I2C_CH_IMU;
 static uint8_t i2c_addr    = ICM42670_I2C_ADDR_GND;
 static bool    is_found    = false;
 
+static uint8_t icm42670AccelRangeToReg(uint16_t fsr_g)
+{
+  switch (fsr_g)
+  {
+    case 2:  return ICM42670_ACCEL_RANGE_2G;
+    case 4:  return ICM42670_ACCEL_RANGE_4G;
+    case 8:  return ICM42670_ACCEL_RANGE_8G;
+    case 16: return ICM42670_ACCEL_RANGE_16G;
+    default: return ICM42670_ACCEL_RANGE_8G;
+  }
+}
+
+static uint8_t icm42670GyroRangeToReg(uint16_t fsr_dps)
+{
+  switch (fsr_dps)
+  {
+    case 250:  return ICM42670_GYRO_RANGE_250DPS;
+    case 500:  return ICM42670_GYRO_RANGE_500DPS;
+    case 1000: return ICM42670_GYRO_RANGE_1000DPS;
+    case 2000: return ICM42670_GYRO_RANGE_2000DPS;
+    default:   return ICM42670_GYRO_RANGE_1000DPS;
+  }
+}
+
+static uint8_t icm42670GyroOdrToReg(uint16_t odr_hz)
+{
+  switch (odr_hz)
+  {
+    case 12:   return ICM42670_GYRO_ODR_12_5HZ;
+    case 25:   return ICM42670_GYRO_ODR_25HZ;
+    case 50:   return ICM42670_GYRO_ODR_50HZ;
+    case 100:  return ICM42670_GYRO_ODR_100HZ;
+    case 200:  return ICM42670_GYRO_ODR_200HZ;
+    case 400:  return ICM42670_GYRO_ODR_400HZ;
+    case 800:  return ICM42670_GYRO_ODR_800HZ;
+    case 1600: return ICM42670_GYRO_ODR_1_6KHZ;
+    default:   return ICM42670_GYRO_ODR_200HZ;
+  }
+}
+
+static uint8_t icm42670AccelOdrToReg(uint16_t odr_hz)
+{
+  switch (odr_hz)
+  {
+    case 12:   return ICM42670_ACCEL_ODR_12_5HZ;
+    case 25:   return ICM42670_ACCEL_ODR_25HZ;
+    case 50:   return ICM42670_ACCEL_ODR_50HZ;
+    case 100:  return ICM42670_ACCEL_ODR_100HZ;
+    case 200:  return ICM42670_ACCEL_ODR_200HZ;
+    case 400:  return ICM42670_ACCEL_ODR_400HZ;
+    case 800:  return ICM42670_ACCEL_ODR_800HZ;
+    case 1600: return ICM42670_ACCEL_ODR_1_6KHZ;
+    default:   return ICM42670_ACCEL_ODR_200HZ;
+  }
+}
 
 
 
@@ -38,7 +93,7 @@ bool icm42670Init(void)
 
   if (!i2cIsBegin(i2c_ch))
   {
-    ret = i2cBegin(i2c_ch, 100);
+    ret = i2cBegin(i2c_ch, ICM42670_I2C_FREQ_KHZ);
   }
 
   if (ret)
@@ -88,10 +143,10 @@ bool icm42670InitRegs(void)
   delay(50);
 
 
-  data  = (ICM42670_INT_MODE_LATCHED         << ICM42670_INT1_MODE_SHIFT);
+  data  = (ICM42670_INT_MODE_PULSED          << ICM42670_INT1_MODE_SHIFT);
   data |= (ICM42670_INT_DRIVE_PUSH_PULL      << ICM42670_INT1_DRIVE_CIRCUIT_SHIFT);
   data |= (ICM42670_INT_POLARITY_ACTIVE_HIGH << ICM42670_INT1_POLARITY_SHIFT);
-  data |= (ICM42670_INT_MODE_LATCHED         << ICM42670_INT2_MODE_SHIFT);
+  data |= (ICM42670_INT_MODE_PULSED          << ICM42670_INT2_MODE_SHIFT);
   data |= (ICM42670_INT_DRIVE_PUSH_PULL      << ICM42670_INT2_DRIVE_CIRCUIT_SHIFT);
   data |= (ICM42670_INT_POLARITY_ACTIVE_HIGH << ICM42670_INT2_POLARITY_SHIFT);
   regWriteByte(ICM42670_REG_INT_CONFIG, data);
@@ -103,21 +158,21 @@ bool icm42670InitRegs(void)
 
   // GYRO
   //
-  data  = ICM42670_GYRO_RANGE_1000DPS << ICM42670_GYRO_UI_FS_SEL_SHIFT;//ICM42670_GYRO_RANGE_2000DPS
-  data |= ICM42670_GYRO_ODR_1_6KHZ << ICM42670_GYRO_ODR_SHIFT;//ICM42670_GYRO_ODR_1_6KHZ
+  data  = icm42670GyroRangeToReg(ICM42670_GYRO_FSR_DPS) << ICM42670_GYRO_UI_FS_SEL_SHIFT;
+  data |= icm42670GyroOdrToReg(ICM42670_ODR_HZ) << ICM42670_GYRO_ODR_SHIFT;
   regWriteByte(ICM42670_REG_GYRO_CONFIG0, data);
 
-  data = ICM42670_GYRO_LFP_BYPASSED << ICM42670_GYRO_UI_FILT_BW_SHIFT;
+  data = ICM42670_GYRO_LPF << ICM42670_GYRO_UI_FILT_BW_SHIFT;
   regWriteByte(ICM42670_REG_GYRO_CONFIG1, data);
 
   // ACCEL
   //
-  data  = ICM42670_ACCEL_RANGE_8G  << ICM42670_ACCEL_UI_FS_SEL_SHIFT;
-  data |= ICM42670_ACCEL_ODR_1_6KHZ << ICM42670_ACCEL_ODR_SHIFT;//ICM42670_ACCEL_ODR_1_6KHZ
+  data  = icm42670AccelRangeToReg(ICM42670_ACCEL_FSR_G)  << ICM42670_ACCEL_UI_FS_SEL_SHIFT;
+  data |= icm42670AccelOdrToReg(ICM42670_ODR_HZ) << ICM42670_ACCEL_ODR_SHIFT;
   regWriteByte(ICM42670_REG_ACCEL_CONFIG0, data);
 
-  data  = ICM42670_ACCEL_AVG_2X   << ICM42670_ACCEL_UI_AVG_SHIFT;
-  data |= ICM42670_ACCEL_LFP_BYPASSED << ICM42670_ACCEL_UI_FILT_BW_SHIFT;
+  data  = ICM42670_ACCEL_AVG_2X << ICM42670_ACCEL_UI_AVG_SHIFT;
+  data |= ICM42670_ACCEL_LPF << ICM42670_ACCEL_UI_FILT_BW_SHIFT;
   regWriteByte(ICM42670_REG_ACCEL_CONFIG1, data);
 
   return true;
@@ -144,8 +199,8 @@ bool icm42670GetInfo(icm42670_info_t *p_info)
 
   p_info->temp = (buf[0]<<8) | (buf[1]<<0);
 
-  p_info->acc_scale = 16384;
-  p_info->gyro_scale = 164;
+  p_info->acc_scale = 32768 / ICM42670_ACCEL_FSR_G;
+  p_info->gyro_scale = 32768 / ICM42670_GYRO_FSR_DPS;
   
   return ret;
 }

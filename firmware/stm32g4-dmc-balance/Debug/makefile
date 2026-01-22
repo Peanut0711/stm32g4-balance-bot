@@ -69,8 +69,8 @@ all: main-build
 main-build: stm32g4-dmc-balance_work.elf secondary-outputs
 
 # Tool invocations
-stm32g4-dmc-balance_work.elf stm32g4-dmc-balance_work.map: $(OBJS) $(USER_OBJS) C:\work\git\stm32g4-balance-bot\firmware\stm32g4-dmc-balance-backup\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32g4-dmc-balance_work.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\work\git\stm32g4-balance-bot\firmware\stm32g4-dmc-balance-backup\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32g4-dmc-balance_work.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32g4-dmc-balance_work.elf stm32g4-dmc-balance_work.map: $(OBJS) $(USER_OBJS) C:\work\git\stm32g4-balance-bot\firmware\stm32g4-dmc-balance\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32g4-dmc-balance_work.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\work\git\stm32g4-balance-bot\firmware\stm32g4-dmc-balance\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32g4-dmc-balance_work.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

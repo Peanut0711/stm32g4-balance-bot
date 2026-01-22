@@ -1,8 +1,9 @@
-../App/hw/src/imu.c:25:6:imuInit	16	static
-../App/hw/src/imu.c:46:6:imuIsInit	4	static
-../App/hw/src/imu.c:51:6:imuBegin	16	static
-../App/hw/src/imu.c:63:6:imuGetInfo	16	static
-../App/hw/src/imu.c:73:6:imuUpdate	16	static
-../App/hw/src/imu.c:81:6:imuUpdateInfo	24	static
-../App/hw/src/imu.c:104:6:imuComputeIMU	40	static
-../App/hw/src/imu.c:161:6:cliCmd	104	static
+../App/hw/src/imu.c:28:6:imuInit	16	static
+../App/hw/src/imu.c:49:6:imuIsInit	4	static
+../App/hw/src/imu.c:54:6:imuBegin	16	static
+../App/hw/src/imu.c:70:6:imuGetInfo	16	static
+../App/hw/src/imu.c:80:6:imuUpdate	16	static
+../App/hw/src/imu.c:88:6:imuUpdateInfo	24	static
+../App/hw/src/imu.c:111:6:imuComputeIMU	32	static
+../App/hw/src/imu.c:162:6:imuCalibrateGyro	144	static
+../App/hw/src/imu.c:190:6:cliCmd	112	static

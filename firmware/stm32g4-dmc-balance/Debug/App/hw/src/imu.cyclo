@@ -1,8 +1,9 @@
-../App/hw/src/imu.c:25:6:imuInit	2
-../App/hw/src/imu.c:46:6:imuIsInit	1
-../App/hw/src/imu.c:51:6:imuBegin	1
-../App/hw/src/imu.c:63:6:imuGetInfo	2
-../App/hw/src/imu.c:73:6:imuUpdate	1
-../App/hw/src/imu.c:81:6:imuUpdateInfo	2
-../App/hw/src/imu.c:104:6:imuComputeIMU	9
-../App/hw/src/imu.c:161:6:cliCmd	17
+../App/hw/src/imu.c:28:6:imuInit	2
+../App/hw/src/imu.c:49:6:imuIsInit	1
+../App/hw/src/imu.c:54:6:imuBegin	2
+../App/hw/src/imu.c:70:6:imuGetInfo	2
+../App/hw/src/imu.c:80:6:imuUpdate	1
+../App/hw/src/imu.c:88:6:imuUpdateInfo	2
+../App/hw/src/imu.c:111:6:imuComputeIMU	3
+../App/hw/src/imu.c:162:6:imuCalibrateGyro	4
+../App/hw/src/imu.c:190:6:cliCmd	18

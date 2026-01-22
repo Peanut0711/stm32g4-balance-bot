@@ -1,9 +1,9 @@
 App/hw/src/imu/icm42670.o: ../App/hw/src/imu/icm42670.c \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu/icm42670.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/err_code.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/evt_code.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu/icm42670.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/err_code.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/evt_code.h \
  ../Core/Inc/main.h ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -38,15 +38,15 @@ App/hw/src/imu/icm42670.o: ../App/hw/src/imu/icm42670.c \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h \
  ../Core/Inc/i2c.h ../Core/Inc/main.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/i2c.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/log.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/include/cli.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu/icm42670_regs.h
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu/icm42670.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/err_code.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/evt_code.h:
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/i2c.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/log.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/include/cli.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu/icm42670_regs.h
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu/icm42670.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/err_code.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/evt_code.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -83,7 +83,7 @@ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/e
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/main.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/i2c.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/log.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/include/cli.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu/icm42670_regs.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/i2c.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/log.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/include/cli.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu/icm42670_regs.h:

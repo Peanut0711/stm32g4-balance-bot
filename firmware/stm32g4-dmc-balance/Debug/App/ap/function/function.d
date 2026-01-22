@@ -1,10 +1,10 @@
 App/ap/function/function.o: ../App/ap/function/function.c \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/ap_def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/err_code.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/evt_code.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/ap_def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/err_code.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/evt_code.h \
  ../Core/Inc/main.h ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -39,32 +39,32 @@ App/ap/function/function.o: ../App/ap/function/function.c \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h \
  ../Core/Inc/i2c.h ../Core/Inc/main.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/led.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/uart.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/include/cli.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/log.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/i2c.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/gpio.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/adc.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/swtimer.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/button.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/can.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/pwm.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/motor.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/encoder.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/ps2.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/pid/pid.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/balance/balance.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/communication/bluetooth.h \
- C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/function/function.h
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/ap_def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/err_code.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/evt_code.h:
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/led.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/uart.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/include/cli.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/log.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/i2c.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/gpio.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/adc.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/swtimer.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/button.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/can.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/pwm.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/motor.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/encoder.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/ps2.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/pid/pid.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/balance/balance.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/communication/bluetooth.h \
+ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/function/function.h
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/ap_def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/err_code.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/evt_code.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -101,23 +101,23 @@ C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/e
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/main.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/led.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/hw_def.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/uart.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/common/include/cli.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/log.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/i2c.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/gpio.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/adc.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/swtimer.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/button.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/can.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/pwm.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/motor.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/encoder.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/imu.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/hw/include/ps2.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/pid/pid.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/balance/balance.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/communication/bluetooth.h:
-C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance-backup/App/ap/function/function.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/led.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/hw_def.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/uart.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/common/include/cli.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/log.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/i2c.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/gpio.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/adc.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/swtimer.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/button.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/can.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/pwm.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/motor.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/encoder.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/imu.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/hw/include/ps2.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/pid/pid.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/balance/balance.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/communication/bluetooth.h:
+C:/work/git/stm32g4-balance-bot/firmware/stm32g4-dmc-balance/App/ap/function/function.h:

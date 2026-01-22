@@ -6,9 +6,18 @@
 #endif
 
 #include "hw_def.h"
+#include <stdint.h>
 
 
 #ifdef _USE_HW_ICM42670
+
+// 기본 브링업/밸런싱용 설정값
+#define ICM42670_I2C_FREQ_KHZ 400
+#define ICM42670_ACCEL_FSR_G  8
+#define ICM42670_GYRO_FSR_DPS 1000
+#define ICM42670_ODR_HZ       200
+#define ICM42670_GYRO_LPF     ICM42670_GYRO_LFP_25HZ
+#define ICM42670_ACCEL_LPF    ICM42670_ACCEL_LFP_25HZ
 
 
 

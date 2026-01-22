@@ -1,4 +1,5 @@
 #include "imu.h"
+#include <stdint.h>
 
 
 
@@ -14,12 +15,14 @@ static void cliCmd(cli_args_t *args);
 #endif
 static void imuComputeIMU( void );
 static bool imuUpdateInfo(imu_info_t *p_info);
+static void imuCalibrateGyro(uint16_t sample_count);
 
-static uint32_t        update_hz = 100;
+static uint32_t        update_hz = ICM42670_ODR_HZ;
 static uint32_t        update_us;
 static bool            is_init   = false;
 static imu_info_t      imu_info;
 static madgwick_info_t filter_info;
+static int16_t         gyro_bias[3] = {0};
 
 
 bool imuInit(void)
@@ -27,8 +30,8 @@ bool imuInit(void)
   bool ret = true;
 
 
-  imu_info.a_res = 2.0 / 32768.0;    // 2g
-  imu_info.g_res = 2000.0 / 32768.0; // 2000dps
+  imu_info.a_res = (float)ICM42670_ACCEL_FSR_G / 32768.0f;
+  imu_info.g_res = (float)ICM42670_GYRO_FSR_DPS / 32768.0f;
   update_us      = 1000000 / update_hz;
 
   is_init = imuBegin();
@@ -54,6 +57,10 @@ bool imuBegin(void)
 
   ret &= icm42670Init();
   ret &= madgwickInit();
+  if (ret)
+  {
+    imuCalibrateGyro(200);
+  }
 
   madgwickSetFreq(update_hz);
   
@@ -107,7 +114,6 @@ void imuComputeIMU( void )
   static uint32_t cur_process_time = 0;
   static uint32_t process_time = 0;
   icm42670_info_t sensor_info;
-  int16_t gyro_offset = 15;
 
 
   if (!icm42670GetInfo(&sensor_info))
@@ -120,12 +126,9 @@ void imuComputeIMU( void )
     prev_process_time = micros();
   }
 
-  if (sensor_info.gyro_x > -gyro_offset && sensor_info.gyro_x < gyro_offset)
-    sensor_info.gyro_x = 0;
-  if (sensor_info.gyro_y > -gyro_offset && sensor_info.gyro_y < gyro_offset)
-    sensor_info.gyro_y = 0;
-  if (sensor_info.gyro_z > -gyro_offset && sensor_info.gyro_z < gyro_offset)
-    sensor_info.gyro_z = 0;
+  sensor_info.gyro_x -= gyro_bias[0];
+  sensor_info.gyro_y -= gyro_bias[1];
+  sensor_info.gyro_z -= gyro_bias[2];
 
   imu_info.ax = (float)sensor_info.acc_x*imu_info.a_res;
   imu_info.ay = (float)sensor_info.acc_y*imu_info.a_res;
@@ -154,6 +157,32 @@ void imuComputeIMU( void )
   imu_info.roll  = filter_info.deg_roll;
   imu_info.pitch = filter_info.deg_pitch;
   imu_info.yaw   = filter_info.deg_yaw - 180;
+}
+
+void imuCalibrateGyro(uint16_t sample_count)
+{
+  int64_t sum[3] = {0};
+  uint16_t valid = 0;
+  icm42670_info_t sensor_info;
+
+  for (uint16_t i = 0; i < sample_count; i++)
+  {
+    if (icm42670GetInfo(&sensor_info))
+    {
+      sum[0] += sensor_info.gyro_x;
+      sum[1] += sensor_info.gyro_y;
+      sum[2] += sensor_info.gyro_z;
+      valid++;
+    }
+    delay(2);
+  }
+
+  if (valid > 0)
+  {
+    gyro_bias[0] = (int16_t)(sum[0] / (int32_t)valid);
+    gyro_bias[1] = (int16_t)(sum[1] / (int32_t)valid);
+    gyro_bias[2] = (int16_t)(sum[2] / (int32_t)valid);
+  }
 }
 
 
@@ -211,6 +240,8 @@ void cliCmd(cli_args_t *args)
     uint32_t data_rate = 0;
     uint32_t pre_count = 0;
     uint32_t pre_time = millis();
+    uint32_t last_print = millis();
+    uint32_t print_period_ms = 50;
 
 
     pre_time = millis();
@@ -226,7 +257,12 @@ void cliCmd(cli_args_t *args)
 
         data_count++;
 
-        cliPrintf("%d\t Roll: %3.2f\t Pitch: %3.2f\t Yaw: %f3.2\n ", data_rate, r, p, y);
+        if (millis() - last_print >= print_period_ms)
+        {
+          last_print = millis();
+          cliPrintf("%d\t Roll: %5.2f\t Pitch: %5.2f\t Yaw: %5.1f\n ", data_rate, r, p, y);
+          cliMoveUp(1);
+        }
       }
 
       if (millis() - pre_time >= 1000)
@@ -237,6 +273,7 @@ void cliCmd(cli_args_t *args)
       }
     }
     
+    cliMoveDown(1);
     ret = true;
   }
 
@@ -247,7 +284,6 @@ void cliCmd(cli_args_t *args)
     cliPrintf( "imu acc\n");
     cliPrintf( "imu gyro\n");
     cliPrintf( "imu show\n");
-    cliPrintf( "imu graph\n");
   }
 }
 
