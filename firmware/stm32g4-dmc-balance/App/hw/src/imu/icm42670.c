@@ -125,7 +125,7 @@ bool icm42670Init(void)
     logPrintf("[NG] ICM42670 Not Found\n");
 
 #ifdef _USE_HW_CLI
-  cliAdd("icm42670", cliCmd);
+  cliAdd("icm", cliCmd);
 #endif
 
   is_init = is_found;
@@ -744,7 +744,7 @@ void cliCmd(cli_args_t *args)
       }
       else
       {
-        cliPrintf("icm42670GetInfo() Err\n");
+        cliPrintf("icmGetInfo() Err\n");
         break;
       }
       delay(10);
@@ -774,7 +774,7 @@ void cliCmd(cli_args_t *args)
       }
       else
       {
-        cliPrintf("icm42670GetInfo() Err\n");
+        cliPrintf("icmGetInfo() Err\n");
         break;
       }
       delay(10);
@@ -830,26 +830,26 @@ void cliCmd(cli_args_t *args)
 
     if (icm42670Calibrate(sample_count, sample_delay_ms))
     {
-      cliPrintf("icm42670 calib ok\n");
+      cliPrintf("icm calib ok\n");
       ret = true;
     }
     else
     {
-      cliPrintf("icm42670 calib fail\n");
+      cliPrintf("icm calib fail\n");
       ret = true;
     }
   }
 
   if (ret != true)
   {
-    cliPrintf("icm42670 info\n");
-    cliPrintf("icm42670 reg addr len\n");
-    cliPrintf("icm42670 get info\n");
-    cliPrintf("icm42670 get raw\n");
-    cliPrintf("icm42670 g_offset gx gy gz\n");
-    cliPrintf("icm42670 a_offset ax ay az\n");
-    cliPrintf("icm42670 offset\n");
-    cliPrintf("icm42670 calib [samples] [delay_ms]\n");
+    cliPrintf("icm info\n");
+    cliPrintf("icm reg addr len\n");
+    cliPrintf("icm get info\n");
+    cliPrintf("icm get raw\n");
+    cliPrintf("icm g_offset gx gy gz\n");
+    cliPrintf("icm a_offset ax ay az\n");
+    cliPrintf("icm offset\n");
+    cliPrintf("icm calib [samples] [delay_ms]\n");
   }
 }
 
