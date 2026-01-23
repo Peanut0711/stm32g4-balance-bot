@@ -1,7 +1,0 @@
-../App/ap/pid/pid.c:9:6:pidUpdate	7
-../App/ap/pid/pid.c:58:6:pidSetting	1
-../App/ap/pid/pid.c:72:6:pidSetcontrollerDirection	3
-../App/ap/pid/pid.c:83:6:pidSetTunings	5
-../App/ap/pid/pid.c:109:6:pidSetOutputLimits	2
-../App/ap/pid/pid.c:119:6:pidSetMode	3
-../App/ap/pid/pid.c:129:6:pidInitialize	3

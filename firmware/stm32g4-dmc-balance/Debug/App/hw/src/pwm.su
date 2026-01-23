@@ -1,7 +1,0 @@
-../App/hw/src/pwm.c:44:6:pwmInit	16	static
-../App/hw/src/pwm.c:63:6:pwmInitTimer	16	static
-../App/hw/src/pwm.c:73:6:pwmIsInit	4	static
-../App/hw/src/pwm.c:78:6:pwmWrite	16	static
-../App/hw/src/pwm.c:97:10:pwmRead	16	static
-../App/hw/src/pwm.c:104:10:pwmGetMax	16	static
-../App/hw/src/pwm.c:113:6:cliPwm	56	static

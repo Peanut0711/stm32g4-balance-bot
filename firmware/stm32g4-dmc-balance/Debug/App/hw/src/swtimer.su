@@ -1,8 +1,0 @@
-../App/hw/src/swtimer.c:36:6:swtimerInit	16	static
-../App/hw/src/swtimer.c:62:6:swtimerISR	16	static
-../App/hw/src/swtimer.c:89:6:swtimerSet	24	static
-../App/hw/src/swtimer.c:100:6:swtimerStart	16	static
-../App/hw/src/swtimer.c:108:6:swtimerStop	16	static
-../App/hw/src/swtimer.c:115:6:swtimerReset	16	static
-../App/hw/src/swtimer.c:123:18:swtimerGetHandle	16	static
-../App/hw/src/swtimer.c:135:10:swtimerGetCounter	4	static

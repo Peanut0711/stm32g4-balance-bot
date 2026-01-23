@@ -1,4 +1,0 @@
-../App/ap/communication/bluetooth.c:20:6:btInit	8	static
-../App/ap/communication/bluetooth.c:25:6:btUpdate	16	static
-../App/ap/communication/bluetooth.c:96:6:btRxDataProcess	24	static
-../App/ap/communication/bluetooth.c:185:6:cliBluetooth	24	static

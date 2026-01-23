@@ -1,9 +1,0 @@
-../App/hw/src/encoder.c:38:6:encoderInit	16	static
-../App/hw/src/encoder.c:60:6:encoderInitGpio	4	static
-../App/hw/src/encoder.c:65:6:encoderReset	16	static
-../App/hw/src/encoder.c:74:6:encoderClearCount	16	static
-../App/hw/src/encoder.c:83:9:encoderGetCount	24	static
-../App/hw/src/encoder.c:95:6:encoderSetCount	16	static
-../App/hw/src/encoder.c:106:6:encoderISR	24	static
-../App/hw/src/encoder.c:158:6:HAL_GPIO_EXTI_Callback	16	static
-../App/hw/src/encoder.c:184:6:cliEncoder	24	static

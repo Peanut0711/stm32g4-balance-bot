@@ -1,8 +1,0 @@
-../App/hw/src/swtimer.c:36:6:swtimerInit	3
-../App/hw/src/swtimer.c:62:6:swtimerISR	6
-../App/hw/src/swtimer.c:89:6:swtimerSet	2
-../App/hw/src/swtimer.c:100:6:swtimerStart	2
-../App/hw/src/swtimer.c:108:6:swtimerStop	2
-../App/hw/src/swtimer.c:115:6:swtimerReset	2
-../App/hw/src/swtimer.c:123:18:swtimerGetHandle	2
-../App/hw/src/swtimer.c:135:10:swtimerGetCounter	1

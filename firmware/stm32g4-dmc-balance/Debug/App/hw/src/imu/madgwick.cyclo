@@ -1,7 +1,0 @@
-../App/hw/src/imu/madgwick.c:26:6:madgwickInit	1
-../App/hw/src/imu/madgwick.c:44:6:madgwickSetFreq	1
-../App/hw/src/imu/madgwick.c:49:6:madgwickSetFreqTime	1
-../App/hw/src/imu/madgwick.c:54:6:madgwickUpdate	4
-../App/hw/src/imu/madgwick.c:129:6:madgwickGetInfo	2
-../App/hw/src/imu/madgwick.c:153:7:invSqrt	1
-../App/hw/src/imu/madgwick.c:165:6:computeAngles	1

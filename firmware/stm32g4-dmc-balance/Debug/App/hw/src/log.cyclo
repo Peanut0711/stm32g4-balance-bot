@@ -1,8 +1,0 @@
-../App/hw/src/log.c:52:6:logInit	1
-../App/hw/src/log.c:79:6:logEnable	1
-../App/hw/src/log.c:84:6:logDisable	1
-../App/hw/src/log.c:89:6:logBoot	1
-../App/hw/src/log.c:94:6:logOpen	1
-../App/hw/src/log.c:104:6:logBufPrintf	4
-../App/hw/src/log.c:138:6:logPrintf	5
-../App/hw/src/log.c:173:6:cliCmd	14
