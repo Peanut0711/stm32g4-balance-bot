@@ -769,8 +769,8 @@ void cliCmd(cli_args_t *args)
         float gy = (float)info.gyro_y / (float)info.gyro_scale;
         float gz = (float)info.gyro_z / (float)info.gyro_scale;
 
-        cliPrintf("ax=%0.4fg ay=%0.4fg az=%0.4fg, ", ax, ay, az);
-        cliPrintf("gx=%0.3fdps gy=%0.3fdps gz=%0.3fdps\n", gx, gy, gz);
+        cliPrintf("ax=%+0.4fg ay=%+0.4fg az=%+0.4fg, ", ax, ay, az);
+        cliPrintf("gx=%+0.3fdps gy=%+0.3fdps gz=%+0.3fdps\n", gx, gy, gz);
       }
       else
       {
