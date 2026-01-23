@@ -18,9 +18,9 @@ bool hwInit(void)
   gpioInit();
   buttonInit();
 
-  // pwmInit();
-  // motorInit();
-  // encoderInit();
+  pwmInit();
+  motorInit();
+  encoderInit();
 
   for (int i=0; i<HW_UART_MAX_CH; i++)
   {

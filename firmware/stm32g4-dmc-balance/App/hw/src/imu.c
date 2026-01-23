@@ -261,7 +261,7 @@ void cliCmd(cli_args_t *args)
         {
           last_print = millis();
           cliPrintf("%d\t Roll: %5.2f\t Pitch: %5.2f\t Yaw: %5.1f\n ", data_rate, r, p, y);
-          cliMoveUp(1);
+          // cliMoveUp(1);
         }
       }
 
@@ -273,7 +273,7 @@ void cliCmd(cli_args_t *args)
       }
     }
     
-    cliMoveDown(1);
+    // cliMoveDown(1);
     ret = true;
   }
 

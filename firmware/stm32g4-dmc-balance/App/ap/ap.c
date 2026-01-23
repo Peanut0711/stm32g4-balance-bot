@@ -44,7 +44,7 @@ void apMain(void)
 
 	  imuUpdate();
 	  cliMain();
-	  // balanceUpdate();
+	  balanceUpdate();
 	  //btUpdate();
 	  //rcCarUpdate();
   }

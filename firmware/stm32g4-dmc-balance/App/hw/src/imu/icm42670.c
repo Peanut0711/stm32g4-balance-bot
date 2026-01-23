@@ -731,8 +731,8 @@ void cliCmd(cli_args_t *args)
     }
     ret = true;
   }
-
-  if (args->argc == 2 && args->isStr(0, "get") && args->isStr(1, "raw"))
+  
+  if (args->argc == 1 && args->isStr(0, "raw"))
   {
     icm42670_info_t info;
 
@@ -754,10 +754,9 @@ void cliCmd(cli_args_t *args)
     ret = true;
   }
 
-  if (args->argc == 2 && args->isStr(0, "get") && args->isStr(1, "info"))
+  if (args->argc == 1 && args->isStr(0, "show"))
   {
     icm42670_info_t info;
-
 
     while(cliKeepLoop())
     {
@@ -846,8 +845,8 @@ void cliCmd(cli_args_t *args)
   {
     cliPrintf("icm info\n");
     cliPrintf("icm reg addr len\n");
-    cliPrintf("icm get info\n");
-    cliPrintf("icm get raw\n");
+    cliPrintf("icm show\n");
+    cliPrintf("icm raw\n");
     cliPrintf("icm g_offset gx gy gz\n");
     cliPrintf("icm a_offset ax ay az\n");
     cliPrintf("icm offset\n");
