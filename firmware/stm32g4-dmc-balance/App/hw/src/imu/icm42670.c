@@ -462,6 +462,8 @@ bool icm42670Calibrate(uint16_t sample_count, uint16_t sample_delay_ms)
   uint16_t valid = 0;
   icm42670_info_t info;
 
+  logPrintf("icm42670Calibrate: sample_count: %d, sample_delay_ms: %d\n", sample_count, sample_delay_ms);
+
   if (sample_count == 0)
   {
     return false;

@@ -42,7 +42,7 @@
 
 #define _USE_HW_GPIO
 #define HW_GPIO_CH_BTN 0
-#define HW_GPIO_MAX_CH 11
+#define HW_GPIO_MAX_CH 12
 
 #define _USE_HW_BUTTON
 #define HW_BUTTON_MAX_CH 1
@@ -78,6 +78,7 @@
 
 typedef enum
 {
+  BTN,
   MT_R_IN_1,
   MT_R_IN_2,
   MT_L_IN_1,

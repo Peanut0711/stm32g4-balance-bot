@@ -15,6 +15,7 @@
 #include "balance.h"
 #include "bluetooth.h"
 #include "function.h"
+#include "imu/icm42670.h"
 
 
 #endif /* AP_AP_DEF_H_ */

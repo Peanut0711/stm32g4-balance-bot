@@ -45,7 +45,7 @@ static bool buttonGetPin(uint8_t ch);
 
 static button_pin_t button_pin[BUTTON_MAX_CH] =
 {
-    { HW_GPIO_CH_BTN, "BTN"},  // 0. BTN
+  { HW_GPIO_CH_BTN, "BTN"},  // 0. BTN
 };
 
 static button_t button_tbl[BUTTON_MAX_CH];

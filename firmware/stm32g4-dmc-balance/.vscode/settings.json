@@ -2,6 +2,7 @@
     "files.associations": {
         "gpio.h": "c",
         "hw.h": "c",
-        "madgwick.h": "c"
+        "madgwick.h": "c",
+        "icm42670.h": "c"
     }
 }
